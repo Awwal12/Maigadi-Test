@@ -1,0 +1,22 @@
+section {
+ padding: 60px 0;
+}
+
+.imgs {
+ border-radius: 15px 50px 30px 5px;
+ max-width: 100p;
+}
+
+.logo {
+ width: 200px;
+ height: 100px;
+}
+
+.imgz {
+ max-width: 100%;
+
+}
+
+.bdy2 {
+ justify-content: space-between;
+}
