@@ -23,7 +23,7 @@ fetch("http://localhost:1337/api/key-features/")
 												<div class="card border-0">
 														<div class="card-body text-center py-4">
 																<h4>{features}</h4>
-																<p>{desc}</p>
+																<p style = "min-height:40px;">{desc}</p>
 																<a href="#" class="btn btn-outline-primary btn-lg mt-3">
 																		Learn More
 																</a>
