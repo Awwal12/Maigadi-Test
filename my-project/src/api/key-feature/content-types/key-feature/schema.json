@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "key_features",
+  "info": {
+    "singularName": "key-feature",
+    "pluralName": "key-features",
+    "displayName": "keyFeature"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FeatureTitle": {
+      "type": "string",
+      "required": true
+    },
+    "FeatureDesc": {
+      "type": "text"
+    }
+  }
+}
