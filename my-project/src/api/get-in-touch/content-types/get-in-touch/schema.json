@@ -4,7 +4,8 @@
   "info": {
     "singularName": "get-in-touch",
     "pluralName": "get-in-touches",
-    "displayName": "getInTouch"
+    "displayName": "getInTouch",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,14 +25,14 @@
       "type": "enumeration",
       "enum": [
         "sales",
-        "Tech support",
+        "tech",
         "others"
       ]
     },
     "yourQuestion": {
       "type": "text",
       "maxLength": 500,
-      "required": true
+      "required": false
     }
   }
 }

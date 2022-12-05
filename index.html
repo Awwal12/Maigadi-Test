@@ -160,7 +160,12 @@
         </div>
         <div class="row justify-content-center my-5">
           <div class="col-lg-6">
-            <form id="forms" action="">
+            <form
+              id="forms"
+              action="send"
+              method="POST"
+              enctype="multipart/form-data"
+            >
               <label for="email" class="form-label">Email address:</label>
               <div class="input-group mb-4">
                 <span class="input-group-text">
@@ -171,6 +176,8 @@
                   id="email"
                   class="form-control"
                   placeholder="e.g. mario@example.com"
+                  name="email"
+                  required
                 />
               </div>
               <label for="name" class="form-label">Name:</label>
@@ -183,6 +190,8 @@
                   id="name"
                   class="form-control"
                   placeholder="e.g. Mario"
+                  name="name"
+                  required
                 />
               </div>
               <label for="subject" class="form-label"
@@ -192,10 +201,10 @@
                 <span class="input-group-text">
                   <i class="bi bi-chat-right-dots-fill text-secondary"></i>
                 </span>
-                <select class="form-select" id="subject">
-                  <option value="Sales" selected>Sales</option>
-                  <option value="Tech">Tech Support</option>
-                  <option value="other">Other</option>
+                <select class="form-select" id="subject" name="reason">
+                  <option value="sales">Sales</option>
+                  <option value="tech">Tech Support</option>
+                  <option value="Others">Others</option>
                 </select>
               </div>
               <div class="mb-4 mt-5 form-floating">
@@ -204,11 +213,14 @@
                   id="query"
                   style="height: 140px"
                   placeholder="query"
+                  name="yourQuestion"
                 ></textarea>
                 <label for="query">Your Question...</label>
               </div>
               <div class="mb-4 text-center">
-                <button type="submit" class="btn btn-secondary">Submit</button>
+                <button type="submit" value="submit" class="btn btn-secondary">
+                  Submit
+                </button>
               </div>
             </form>
           </div>

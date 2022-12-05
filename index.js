@@ -95,3 +95,42 @@ const template = `
 		document.getElementById("accordionFlushExample").innerHTML += compiled;
 }   
 //End of FAQs API call and display
+// Start of Post API 
+
+const form1=document.getElementById('forms')
+
+form1.addEventListener('submit', function(e){
+ e.preventDefault()
+
+	const formData = new FormData(form1);
+	const data = Object.fromEntries(formData);
+ // var email=document.getElementById('email').value
+ // var name=document.getElementById('name').value
+ // var yourQuestion=document.getElementById('query').value
+	// subject.OnChange = (e) => {
+	// 	result.innerText = even.target.value;
+	// }
+
+ fetch('http://localhost:1337/api/get-in-touches', {
+  method: 'POST',
+  body: JSON.stringify({data:data}),
+  //  { data: {email:email, 
+		// 	name:name,
+		// 	reason:subject,
+  //  yourQuestion:query
+		// 	}
+  // }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  }
+  })
+  .then(function(response){ 
+  return response.json()})
+  .then(function(data)
+  {console.log(data)
+  // title=document.getElementById("title")
+  // body=document.getElementById("bd")
+  // title.innerHTML = data.title
+  // body.innerHTML = data.body  
+}).catch(error => console.error('Error:', error)); 
+});
